@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" >
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payrollator</title>
+    <link rel="stylesheet" href="./css/Style.css">
+  </head>
+  <body>
+    <h3 id="Title">Payrollator</h3>
+    <div class="center">
+      <button id="startbtn">Start</button> <!--Start button-->
+    </div>
+    <div class="choosePopUp"> <!--Popup after startbtn is pressed-->
+      <h3>What type of payroll would you like to do?</h3>
+      <div id="closeBtn">x</div> <!--close button for popup #1-->
+      <div class="choiceBtn"> <!--choose Monthly or Semi-Monthly-->
+        <center>
+        <button id="Monthly">Monthly</button>
+        <button id="semiMonthly">Semi-Monthly</button>
+        </center>
+      </div>
+    </div>
+    <div class="monthlyPopUp">
+      <div class="input-group">
+          <input type="text" required>
+          <label>Employee Name</label>
+      </div>
+      <div class="input-group">
+          <input type="text" required>
+          <label>Total Working Hours</label>
+      </div>
+      <div class="input-group">
+          <input type="text" required>
+          <label>Total Working days</label>
+      </div>
+      <div class="input-group">
+          <input type="text"required>
+          <label>Late/s</label>
+      </div>
+      <div class="input-group">
+          <input type="text"required>
+          <label>Absent/s</label>
+      </div>
+      <div class="mathbtn">
+        <button id="computeBtn" name="button">Compute</button>
+      </div>
+      <div id="monthlyCloseBtn" onclick = "monthlyClose()">x</div> <!--close button for monthly popup-->
+  </div>
+  <div class="semiMonthlyPopUp">
+    <div class="input-group">
+        <input type="text" required>
+        <label>Employee Name</label>
+    </div>
+    <div class="input-group">
+        <input type="text" required>
+        <label>Total Working Hours</label>
+    </div>
+    <div class="input-group">
+        <input type="text" required>
+        <label>Total Working days</label>
+    </div>
+    <div class="input-group">
+        <input type="text"required>
+        <label>Late/s</label>
+    </div>
+    <div class="input-group">
+        <input type="text"required>
+        <label>Absent/s</label>
+    </div>
+    <div class="mathbtn">
+      <button id="computeBtn" name="button">Compute</button>
+    </div>
+    <div id="semiMonthlyCloseBtn">x</div> <!--close button for monthly popup-->
+</div>
+  <script src="./js/Script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,230 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  background: linear-gradient(to right, #9facd6, #938FE6); /*Bg color ng site*/
+  animation: gradientAnimation 4s ease infinite;
+  font-family: cursive;
+   min-height: 100vh;
+}
+#Title {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  font-size: 50px;
+  transform: translate(-50%,-50%);
+}
+.center { /*div of "Payrollator" and start button*/
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#startbtn {
+  padding: 10px 20px;
+  font-size: 25px;
+  font-weight: 600;
+  color: #222;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.choosePopUp { /*Design of popup and hidden by default*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  padding: 20px 30px;
+  font-size: 25px;
+  background: #ffff;
+  border-radius: 5px;
+  box-shadow: 10px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%) scale(1.25);
+  transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+  visibility: hidden;
+}
+.choosePopUp.active {/*visible na yung choose popup after clicking the start btn*/
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+}
+.choiceBtn #Monthly, #semiMonthly { /*Monthly and semiMonthly btn customization*/
+  margin-top: 10px;
+  padding: 20px 20px;
+  font-size: 25px;
+  font-weight: 600;
+  color: #222;
+  background: #f5f5f5;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.choosePopUp #closeBtn { /*Design of  close btn*/
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  padding-top: 2px;
+  width: 25px;
+  height: 25px;
+  background: #888;
+  font-size: 20px;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.monthlyPopUp { /* Design of Monthly*/
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  width: 1200px;
+  height: 600px;
+  padding: 20px 30px;
+  margin: 10px;
+  background: #ffff;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%) scale(1.25);
+  transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+  visibility: hidden; /*sdefault na hidden yung choose popup*/
+}
+#monthlyCloseBtn{
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  padding-top: 2px;
+  width: 25px;
+  height: 25px;
+  background: #888;
+  font-size: 20px;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.monthlyPopUp.active {/*visible na yung choose popup after clicking the monthly btn*/
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  display: absolute;
+}
+
+/* Input boxes */
+.input-group {
+    position: relative;
+    margin: 30px 10px;
+    display: block;
+}
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #000000;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: .5s;
+    z-index: 1;
+    transition: top 0.5s, font-size 0.5s;
+}
+
+.input-group input {
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: #000000;
+    padding: 0px 10px;
+    background: transparent;
+    border: 1.2px solid #000000;
+    outline: none;
+    border-radius: 5px;
+    position: relative;
+
+}
+/*-------------------------------*/
+
+.semiMonthlyPopUp { /* Design of Monthly*/
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  width: 1200px;
+  height: 600px;
+  padding: 20px 30px;
+  margin: 10px;
+  background: #ffff;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%) scale(1.25);
+  transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+  visibility: hidden; /*default na hidden yung choose popup*/
+}
+#semiMonthlyCloseBtn{
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  padding-top: 2px;
+  width: 25px;
+  height: 25px;
+  background: #888;
+  font-size: 20px;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.semiMonthlyPopUp.active2 {/*visible na yung choose popup after clicking the monthly btn*/
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  display: absolute;
+}
+
+#computeBtn {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background: #86c47d;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/*--animation inputlbl--*/
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: 0;
+    font-size: 12px;
+    background: #fff;
+}
+.monthlyPopUp.active .input-group label {
+    transition: .5s;
+}
+.semiMonthlyPopUp.active2 .input-group label {
+    transition: .5s;
+}
+/*------------------------------*/
+
+
+/*-------animation hovers--------*/
+.choosePopUp #closeBtn:hover {
+  background: #ababab;
+}
+#startbtn:hover {
+  background: #f0f0f0;
+}
+.choiceBtn #Monthly:hover,
+#semiMonthly:hover {
+  background: #f0f0f0;
+}
+.choiceBtn #Monthly:hover, #semiMonthly:hover {
+  background: #f0f0f0;
+}
+#computeBtn:hover {
+  background: #3d7f40;
+}
