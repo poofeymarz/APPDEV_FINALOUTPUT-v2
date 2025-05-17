@@ -228,3 +228,25 @@
  #computeBtn:hover {
    background: #3d7f40;
  }
+
+/*calendar*/
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+.day {
+  border: 1px solid #aaa;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.worked {
+  background-color: lightgreen;
+}
+.header {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
